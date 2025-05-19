@@ -1,0 +1,15 @@
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\bin\Debug\net9.0\Swinburne_OOP_HD.exe
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\bin\Debug\net9.0\Swinburne_OOP_HD.deps.json
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\bin\Debug\net9.0\Swinburne_OOP_HD.runtimeconfig.json
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\bin\Debug\net9.0\Swinburne_OOP_HD.dll
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\bin\Debug\net9.0\Swinburne_OOP_HD.pdb
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.AssemblyInfoInputs.cache
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.AssemblyInfo.cs
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.csproj.CoreCompileInputs.cache
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.sourcelink.json
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.dll
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\refint\Swinburne_OOP_HD.dll
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.pdb
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.genruntimeconfig.cache
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\ref\Swinburne_OOP_HD.dll

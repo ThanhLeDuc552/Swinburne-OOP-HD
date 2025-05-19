@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Swinburne_OOP_HD/1.0.0": {
+        "runtime": {
+          "Swinburne_OOP_HD.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Swinburne_OOP_HD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
