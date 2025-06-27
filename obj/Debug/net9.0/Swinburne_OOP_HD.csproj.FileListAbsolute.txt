@@ -13,3 +13,4 @@ C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\r
 C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.pdb
 C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\Swinburne_OOP_HD.genruntimeconfig.cache
 C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\obj\Debug\net9.0\ref\Swinburne_OOP_HD.dll
+C:\Users\leduc\Desktop\Uni\COS20007\Projects\Swinburne_OOP_HD\bin\Debug\net9.0\animations\SmithIdle.txt
