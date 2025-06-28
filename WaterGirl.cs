@@ -24,7 +24,11 @@ namespace Swinburne_OOP_HD
             }
             else if (SplashKit.KeyDown(KeyCode.UpKey))
             {
-                
+                Jump();
+            }
+            else if (SplashKit.KeyDown(KeyCode.DownKey))
+            {
+                Fall();
             }
             else
             {
