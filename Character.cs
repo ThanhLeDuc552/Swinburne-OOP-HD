@@ -25,16 +25,16 @@ namespace Swinburne_OOP_HD
         private ActionResource _currAction;
 
         // Sprite scaling factor and calculation
-        private const float SPRITE_SCALE = 0.1f;
+        private const float SPRITE_SCALE = 0.3f;
         private const double HEAD_TO_LEG_ORIGINAL_DISTANCE = 50.0; // Original distance between head and leg in moveRight mode
         private const double HEAD_TO_LEG_SCALED_DISTANCE = HEAD_TO_LEG_ORIGINAL_DISTANCE * SPRITE_SCALE; // Scaled distance (= 5.0)
-
-        // Vectors
-        private Vector2D _velocityX;
-        private Vector2D _velocityY;
-
-        private ICharacterState _currentState;
-        private Dictionary<string, ICharacterState> _states;
+        
+        // Action names
+        private const string MOVE_RIGHT = "MoveRight";
+        private const string MOVE_LEFT = "MoveLeft";
+        private const string JUMP = "Jump";
+        private const string FALL = "Fall";
+        private const string IDLE = "Idle";
 
         private ActionResource CreateActionResource(string actionName, string charName)
         {
@@ -59,65 +59,29 @@ namespace Swinburne_OOP_HD
             SplashKit.LoadResourceBundle(name, bundleFile);
             InitActions(name);
             SetScale();
-
-            InitStates();
-            ChangeState("Idle");
-        }
-
-        private void InitStates()
-        {
-            _states = new Dictionary<string, ICharacterState>
-            {
-                { "Idle", new IdleState() },
-                { "MoveRight", new MoveRightState() },
-                { "MoveLeft", new MoveLeftState() },
-                { "Jump", new JumpState() },
-                { "Fall", new FallState() }
-            };
-        }
-
-        public void ChangeState(string stateName)
-        {
-            _currentState?.Exit(this);
-            _currentState = _states[stateName];
-            _currentState.Enter(this);
-        }
-
-        public void HandleInput() => _currentState.HandleInput(this);
-        public void Update() => _currentState.Update(this);
-
-        public void SetCurrentActionByName(string actionName)
-        {
-            switch (actionName)
-            {
-                case "Idle": _currAction = _idle; break;
-                case "MoveRight": _currAction = _moveRight; break;
-                case "MoveLeft": _currAction = _moveLeft; break;
-                case "Jump": _currAction = _jump; break;
-                case "Fall": _currAction = _fall; break;
-            }
+            SetCurrentAction(_idle);
         }
 
         private void InitActions(string name)
         {
             // MoveRight initialization
-            _moveRight = CreateActionResource("MoveRight", name);
+            _moveRight = CreateActionResource(MOVE_RIGHT, name);
             _moveRight.Sprite.StartAnimation(0);
 
             // MoveLeft initialization
-            _moveLeft = CreateActionResource("MoveLeft", name);
+            _moveLeft = CreateActionResource(MOVE_LEFT, name);
             _moveLeft.Sprite.StartAnimation(0);
 
             // Jump initialization
-            _jump = CreateActionResource("Jump", name);
+            _jump = CreateActionResource(JUMP, name);
             _jump.Sprite.StartAnimation(0);
 
             // Fall initialization
-            _fall = CreateActionResource("Fall", name);
+            _fall = CreateActionResource(FALL, name);
             _fall.Sprite.StartAnimation(0);
 
             // Idle initialization
-            _idle = CreateActionResource("Idle", name);
+            _idle = CreateActionResource(IDLE, name);
             _idle.Sprite.StartAnimation(0);
         }
 
@@ -164,6 +128,23 @@ namespace Swinburne_OOP_HD
             return (offsetX, offsetY);
         }
 
+        /*
+        protected void SetAnchorPoints(Point2D idlePt, Point2D fallPt, Point2D jumpPt, Point2D moveRightPt, Point2D moveLeftPt)
+        {
+            _idle.Sprite.AnchorPoint = idlePt;
+            _fall.Sprite.AnchorPoint = fallPt;
+            _jump.Sprite.AnchorPoint = jumpPt;
+            _moveRight.Sprite.AnchorPoint = moveRightPt;
+            _moveLeft.Sprite.AnchorPoint = moveLeftPt;
+
+            _idle.Sprite.MoveFromAnchorPoint = true;
+            _moveLeft.Sprite.MoveFromAnchorPoint = true;
+            _moveRight.Sprite.MoveFromAnchorPoint = true;
+            _jump.Sprite.MoveFromAnchorPoint = true;
+            _fall.Sprite.MoveFromAnchorPoint = true;
+        }
+        */
+
         private void SetScale()
         {
             _idle.Sprite.Scale = SPRITE_SCALE;
@@ -172,29 +153,52 @@ namespace Swinburne_OOP_HD
             _moveRight.Sprite.Scale = SPRITE_SCALE;
             _moveLeft.Sprite.Scale = SPRITE_SCALE;
         }
-        
-        public void Gravity() { }
 
-        public void SetStartPosition(Point2D pos)
+        private void SetCurrentAction(ActionResource action)
         {
-            _pos.X = pos.X - _idle.Sprite.SpriteCenterPoint.X;
-            _pos.Y = pos.Y - _idle.Sprite.SpriteCenterPoint.Y;
+            if (_currAction.Name != action.Name)
+            {
+                _currAction = action;
+            }
+        }
+
+        public void MoveRight()
+        {
+            _pos.X += 0.1;
+            SetCurrentAction(_moveRight);
+        }
+
+        public void MoveLeft()
+        {
+            _pos.X -= 0.1;
+            SetCurrentAction(_moveLeft);
+        }
+
+        public void Jump()
+        {
+            SetCurrentAction(_jump);
+        }
+
+        public void Fall()
+        {
+            SetCurrentAction(_fall);
+        }
+
+        public void Idle()
+        {
+            SetCurrentAction(_idle);
+        }
+        
+        public void Gravity()
+        {
+
         }
 
         abstract public void ProcessInput();
          
         public Point2D Position
         {
-            get 
-            {
-                return _pos;
-            }
-            set
-            {
-                _pos = value;
-            }
+            get { return _pos; }
         }
-
-        public void ClearResources() { }
     }
 }

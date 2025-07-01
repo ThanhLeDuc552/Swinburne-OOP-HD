@@ -200,6 +200,7 @@ C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\bundles\fireboy_movemen
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\bundles\readme.txt
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\bundles\watergirl_movement.txt
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\fonts\readme.txt
+C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\images\blocks.png
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\images\fireboy_movement\fireboyfall.png
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\images\fireboy_movement\fireboyidle.png
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\images\fireboy_movement\fireboyjump.png
@@ -372,5 +373,3 @@ C:\Users\leduc\Desktop\Swinburne-OOP-HD\obj\Debug\net8.0\ref\Swinburne_OOP_HD.dl
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\Bricks.tsx
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\ExitDoors.tsx
 C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\Liquids.tsx
-C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\Level2.tmx
-C:\Users\leduc\Desktop\Swinburne-OOP-HD\bin\Debug\net8.0\Water.tsx

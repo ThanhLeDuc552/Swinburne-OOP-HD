@@ -9,20 +9,40 @@ namespace Swinburne_OOP_HD
 {
     public class FireBoy : Character
     {
-        public FireBoy(Point2D pos) : base("fireboy_movement.txt", "fire", "FireBoy", pos) { }
+        public FireBoy(Point2D pos) : base("fireboy_movement.txt", "fire", "FireBoy", pos) 
+        {
+            /*
+            Point2D idlePt = new Point2D() { X = 107, Y = 410 };
+            Point2D fallPt = new Point2D() { X = 107, Y = 410 };
+            Point2D jumpPt = new Point2D() { X = 107, Y = 336 };
+            Point2D moveRightPt = new Point2D() { X = 250, Y = 270 };
+            Point2D moveLeftPt = new Point2D() { X = 96, Y = 270 };
+            SetAnchorPoints(idlePt, fallPt, jumpPt, moveRightPt, moveLeftPt);
+            */
+        }
 
         public override void ProcessInput()
         {
             if (SplashKit.KeyDown(KeyCode.DKey))
-                ChangeState("MoveRight");
+            {
+                MoveRight();
+            }
             else if (SplashKit.KeyDown(KeyCode.AKey))
-                ChangeState("MoveLeft");
+            {
+                MoveLeft();
+            }
             else if (SplashKit.KeyDown(KeyCode.WKey))
-                ChangeState("Jump");
+            {
+                Jump();
+            }
             else if (SplashKit.KeyDown(KeyCode.SKey))
-                ChangeState("Fall");
-            else
-                ChangeState("Idle");
+            {
+                Fall();
+            }
+            else if (SplashKit.KeyDown(KeyCode.SpaceKey))
+            {
+                Idle();
+            }
         }
     }
 }
