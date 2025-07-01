@@ -25,7 +25,7 @@ namespace Swinburne_OOP_HD
         private ActionResource _currAction;
 
         // Sprite scaling factor and calculation
-        private const float SPRITE_SCALE = 0.3f;
+        private const float SPRITE_SCALE = 0.1f;
         private const double HEAD_TO_LEG_ORIGINAL_DISTANCE = 50.0; // Original distance between head and leg in moveRight mode
         private const double HEAD_TO_LEG_SCALED_DISTANCE = HEAD_TO_LEG_ORIGINAL_DISTANCE * SPRITE_SCALE; // Scaled distance (= 5.0)
         
@@ -35,6 +35,10 @@ namespace Swinburne_OOP_HD
         private const string JUMP = "Jump";
         private const string FALL = "Fall";
         private const string IDLE = "Idle";
+
+        // Vectors
+        private Vector2D _velocityX;
+        private Vector2D _velocityY;
 
         private ActionResource CreateActionResource(string actionName, string charName)
         {
@@ -60,6 +64,12 @@ namespace Swinburne_OOP_HD
             InitActions(name);
             SetScale();
             SetCurrentAction(_idle);
+        }
+
+        private void InitVectors()
+        {
+            //_velocityX = new Vector2D() {X = ;
+            //_velocityY = new Vector2D();
         }
 
         private void InitActions(string name)
@@ -128,7 +138,7 @@ namespace Swinburne_OOP_HD
             return (offsetX, offsetY);
         }
 
-        /*
+        
         protected void SetAnchorPoints(Point2D idlePt, Point2D fallPt, Point2D jumpPt, Point2D moveRightPt, Point2D moveLeftPt)
         {
             _idle.Sprite.AnchorPoint = idlePt;
@@ -143,7 +153,7 @@ namespace Swinburne_OOP_HD
             _jump.Sprite.MoveFromAnchorPoint = true;
             _fall.Sprite.MoveFromAnchorPoint = true;
         }
-        */
+        
 
         private void SetScale()
         {
@@ -191,14 +201,33 @@ namespace Swinburne_OOP_HD
         
         public void Gravity()
         {
+            // walking on ground
 
+        }
+
+        public void SetStartPosition(Point2D pos)
+        {
+            _pos.X = pos.X - _idle.Sprite.SpriteCenterPoint.X;
+            _pos.Y = pos.Y - _idle.Sprite.SpriteCenterPoint.Y;
         }
 
         abstract public void ProcessInput();
          
         public Point2D Position
         {
-            get { return _pos; }
+            get 
+            {
+                return _pos;
+            }
+            set
+            {
+                _pos = value;
+            }
+        }
+
+        public void ClearResources()
+        {
+            
         }
     }
 }

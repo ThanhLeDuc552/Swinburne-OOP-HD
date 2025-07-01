@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "ExitDoors.tsx",
+    "activeFile": "Level1.tmx",
     "expandedProjectPaths": [
     ],
     "fileStates": {
@@ -41,10 +41,10 @@
         },
         "Level1.tmx": {
             "scale": 0.75,
-            "selectedLayer": 0,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 448,
-                "y": 304.6666666666667
+                "x": 447.9999999999999,
+                "y": 125.33333333333337
             }
         },
         "Liquids.tsx": {
@@ -69,10 +69,10 @@
     "project": "Levels.tiled-project",
     "recentFiles": [
         "Blocks.tsx",
-        "Level1.tmx",
-        "Liquids.tsx",
-        "Bricks.tsx",
         "ExitDoors.tsx",
+        "Bricks.tsx",
+        "Liquids.tsx",
+        "Level1.tmx",
         "C:/Users/leduc/Desktop/maps/level1.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",

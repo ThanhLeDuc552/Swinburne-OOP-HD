@@ -11,14 +11,14 @@ namespace Swinburne_OOP_HD
     {
         public FireBoy(Point2D pos) : base("fireboy_movement.txt", "fire", "FireBoy", pos) 
         {
-            /*
+            
             Point2D idlePt = new Point2D() { X = 107, Y = 410 };
             Point2D fallPt = new Point2D() { X = 107, Y = 410 };
             Point2D jumpPt = new Point2D() { X = 107, Y = 336 };
             Point2D moveRightPt = new Point2D() { X = 250, Y = 270 };
             Point2D moveLeftPt = new Point2D() { X = 96, Y = 270 };
             SetAnchorPoints(idlePt, fallPt, jumpPt, moveRightPt, moveLeftPt);
-            */
+            
         }
 
         public override void ProcessInput()
@@ -39,7 +39,7 @@ namespace Swinburne_OOP_HD
             {
                 Fall();
             }
-            else if (SplashKit.KeyDown(KeyCode.SpaceKey))
+            else
             {
                 Idle();
             }

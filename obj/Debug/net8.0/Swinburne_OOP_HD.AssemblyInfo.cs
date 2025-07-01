@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Swinburne_OOP_HD")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10c9550968b3ec6257371b0223b8675f77b009a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5f1b9be23ff1887c8935419729f1960007f0c18")]
 [assembly: System.Reflection.AssemblyProductAttribute("Swinburne_OOP_HD")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Swinburne_OOP_HD")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
