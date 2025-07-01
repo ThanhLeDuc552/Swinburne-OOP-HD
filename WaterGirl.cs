@@ -15,25 +15,15 @@ namespace Swinburne_OOP_HD
         public override void ProcessInput()
         {
             if (SplashKit.KeyDown(KeyCode.RightKey))
-            {
-                MoveRight();
-            }
+                ChangeState("MoveRight");
             else if (SplashKit.KeyDown(KeyCode.LeftKey))
-            {
-                MoveLeft();
-            }
+                ChangeState("MoveLeft");
             else if (SplashKit.KeyDown(KeyCode.UpKey))
-            {
-                Jump();
-            }
+                ChangeState("Jump");
             else if (SplashKit.KeyDown(KeyCode.DownKey))
-            {
-                Fall();
-            }
+                ChangeState("Fall");
             else
-            {
-                Idle();
-            }
+                ChangeState("Idle");
         }
     }
 }

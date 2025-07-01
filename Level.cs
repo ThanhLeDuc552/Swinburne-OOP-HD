@@ -24,10 +24,11 @@ namespace Swinburne_OOP_HD
         private Dictionary<uint, Bitmap> _bricks; // Dictionary to hold tile GID, Bitmap
         private Dictionary<uint, DrawingOptions> _rotationOptions;
 
+        /*
         private List<Water> _waterTiles;
         private List<Lava> _lavaTiles;
         private List<Mud> _mudTiles;
-
+        */
         public Level(string tmxFilePath)
         {
             Loader loader = Loader.Default();

@@ -63,7 +63,8 @@ namespace Swinburne_OOP_HD
 
                 level1.Draw();
                 fireBoy.DrawChar(); // Draw the FireBoy character
-                fireBoy.ProcessInput(); // Process input for the FireBoy character
+                fireBoy.HandleInput();
+                fireBoy.Update();
                 SplashKit.DrawInterface();
                 SplashKit.RefreshScreen();
             }

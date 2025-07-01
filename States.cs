@@ -1,3 +1,5 @@
+using SplashKitSDK;
+
 namespace Swinburne_OOP_HD
 {
     public class IdleState : ICharacterState
@@ -18,7 +20,7 @@ namespace Swinburne_OOP_HD
         public void Exit(Character character) { }
     }
 
-    public class MoveLeftState : IcharacterState
+    public class MoveLeftState : ICharacterState
     {
         public string Name => "MoveLeft";
         public void Enter(Character character) => character.SetCurrentActionByName("MoveLeft");

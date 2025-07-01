@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset version="1.10" tiledversion="1.11.2" name="Water" tilewidth="22" tileheight="13" tilecount="40" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
- <tile id="0" x="0" y="0" width="18" height="13">
+ <tile id="0" x="0" y="0" width="18" height="13" type="Liquid">
+  <properties>
+   <property name="type" value="mud"/>
+  </properties>
   <image source="images/tiles/objects/water/BlackBox/1.png" width="22" height="13"/>
   <animation>
    <frame tileid="0" duration="50"/>
@@ -63,7 +66,10 @@
  <tile id="14">
   <image source="images/tiles/objects/water/BlackBox/15.png" width="22" height="13"/>
  </tile>
- <tile id="15" x="0" y="0" width="18" height="13">
+ <tile id="15" x="0" y="0" width="18" height="13" type="Liquid">
+  <properties>
+   <property name="type" value="lava"/>
+  </properties>
   <image source="images/tiles/objects/water/FireBox/1.png" width="20" height="13"/>
   <animation>
    <frame tileid="15" duration="50"/>
@@ -125,7 +131,10 @@
  <tile id="29">
   <image source="images/tiles/objects/water/FireBox/15.png" width="20" height="13"/>
  </tile>
- <tile id="30" x="0" y="0" width="18" height="13">
+ <tile id="30" x="0" y="0" width="18" height="13" type="Liquid">
+  <properties>
+   <property name="type" value="water"/>
+  </properties>
   <image source="images/tiles/objects/water/WaterBox/1.png" width="22" height="13"/>
   <animation>
    <frame tileid="30" duration="50"/>
