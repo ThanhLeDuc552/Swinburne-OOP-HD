@@ -1,29 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using SplashKitSDK;
 
 namespace Swinburne_OOP_HD
 {
-    public class FireBoy : Character
+    internal class WaterGirl : Character
     {
-        public FireBoy(Point2D pos) : base("fireboy_movement.txt", "fire", "FireBoy", pos) { }
+        public WaterGirl(Point2D pos) : base("watergirl_movement.txt", "water", "WaterGirl", pos) { }
 
         public override void ProcessInput()
         {
-            if (SplashKit.KeyDown(KeyCode.DKey))
+            if (SplashKit.KeyDown(KeyCode.RightKey))
             {
                 MoveRight();
             }
-            else if (SplashKit.KeyDown(KeyCode.AKey))
+            else if (SplashKit.KeyDown(KeyCode.LeftKey))
             {
                 MoveLeft();
             }
-            else if (SplashKit.KeyDown(KeyCode.WKey))
+            else if (SplashKit.KeyDown(KeyCode.UpKey))
             {
-                Rotate();
+                
             }
             else
             {
